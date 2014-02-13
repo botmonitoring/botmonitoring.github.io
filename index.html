@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -18,6 +18,26 @@
       </div>
 
       <div class="content">
+      	<h2 id="premise" class="content-subhead">Premise<a href="premise" class="content-link"></a></h2>
+      	<p>
+      	  On freenode there have been reports of bots joining channels, idling in them, and then quitting. 
+      	    It is unknown for what reason they do this, but they can be a nuiscance and should be banned.
+      	    However, they constantly change IPs so this project was created to find the IPs.
+      	</p>
+      	<h2 id="features" class="content-subhead">Identifying features.<a href="premise" class="content-link"></a></h2>
+      	    These are some identifying features of the bots.
+      	  <ul>
+      	  	<li><strong>Hostmask</strong> &mdash; These bots will have a cloak with their IP as the cloak.
+      	  	  The ident will have a leading ~ and will follow with the first 9 letters of the nick. 
+      	  	  Additionally, the nick will be enitrely lower case with no numbers or any character 
+      	  	  besides the alphabet. </br> <em>Example: examplenick!~exmpleni@127.0.0.1</em></li>
+      	  	 <li><strong>Quitting message</strong> &mdash; The bots will always quit after a short
+      	  	  period with the message "Remote host has closed the connection."</li>
+      	  	 <li><strong>CTCP</strong> &mdash; The bots will not reply to any form of CTCP, 
+      	  	  including <code>CTCP PING.</code> Do <strong>NOT</strong> CTCP them under any 
+      	  	  circumstances, even if you suspect that they may be a bot. </li>
+      	  	 <li><strong>IP Range</strong> &mdash; THe bots have been comming from certain CIDR 
+      	  	 Ranges, see the next section for more information.</li>
         <h2 id="ranges" class="content-subhead">Ranges<a href="#ranges" class="content-link"></a></h2>
         <p>
           The following IP ranges are known to have been K-lined by freenode staff. However, we have no
@@ -48,9 +68,10 @@
         <ol>
           <li>Use common sense.</li>
           <li>Do not send notices to the channel.</li>
-          <li>Do not bring unauthorized bots to the channel. This includes client scripts which
-              interfere with the channel.</li>
-          </li>
+          <li>Do not bring unauthorized bots to the channel. This includes cllient scripts with 
+              automated triggers replying in-channel</li>
+          <li>Do not query, CTCP, notice, or otherwise interact with any of the people that
+          	  hexagon identifies as possible bots, as most of them are legit users.</li>
         </ol>
       </div>
     </div>
