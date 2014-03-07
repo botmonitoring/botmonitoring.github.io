@@ -21,27 +21,26 @@
       <div class="content">
         <h2 id="premise" class="content-subhead">Premise<a href="#premise" class="content-link"></a></h2>
         <p>
-          In the past, there have been reports of random bots joining channels. Some of them idle
-          in the channel for a while, then quit, usually with the message <em>Remote host closed the
-          connection</em> or <em>Ping timeout</em>. Others join channels, then leave straight away.
-          Although their purpose is unknown&mdash;there have been theories suggesting they collect
-          channel and user lists&mdash;, they can be a nuisance and should probably be banned.
+          There have been reports of bots following a similar pattern joining channels. Although
+          their true purpose is currently unknown, they can be a nuisance, and people have been
+          suggesting they might be collecting channel and user statistics.
         </p>
 
         <h2 id="identifying" class="content-subhead">Identifying<a href="#identifying" class="content-link"></a></h2>
         <p>
-          Nicknames of the bots usually consist of only lowercase letters, and their username and
+          Nicknames of the bots usually consist of lowercase letters only, and their username and
           real name is fully or nearly identical to their nick. Their hostname is an IPv4 address.
-          They don't respond to CTCP requests and private messages.
+          They don't respond to CTCP requests and private messages. Some of them idle in channels
+          for a while, and others part straight away. A few are capable of rejoining on kick and
+          <code>/remove</code>. They usually quit with the message <em>Remote host closed the connection</em>
+          or <em>Ping timeout</em>.
         </p>
         <p>
           More recently, we have been seeing the following pattern:
 
-          <pre>
-PORT     STATE SERVICE    VERSION
+          <pre><code>PORT     STATE SERVICE    VERSION
 1080/tcp open  socks5     Socks4A (Username/password authentication required)
-8080/tcp open  http-proxy 3Proxy http proxy</pre>
-          </p>
+8080/tcp open  http-proxy 3Proxy http proxy</code></pre>
         </p>
 
         <h2 id="ranges" class="content-subhead">Ranges<a href="#ranges" class="content-link"></a></h2>
