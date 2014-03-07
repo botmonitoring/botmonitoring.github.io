@@ -1,96 +1,99 @@
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A project created to help fight the spy bot &quot;invasion&quot; on freenode.">
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="freenode bot monitoring : A project created to help fight the spy bot &quot;invasion&quot; on freenode." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>freenode bot monitoring</title>
-
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.4.1/pure-min.css">
-    <link rel="stylesheet" href="css/pure-combo.css">
-    <link rel="stylesheet" href="css/main.css">
   </head>
+
   <body>
-    <div id="main">
-      <div class="header">
-        <h1>freenode bot monitoring</h1>
-        <h2>A project created to help fight the spy bot "invasion" on freenode.</h2>
-      </div>
 
-      <div class="content">
-        <h2 id="premise" class="content-subhead">Premise<a href="#premise" class="content-link"></a></h2>
-        <p>
-          In the past, there have been reports of random bots joining channels. Some of them idle
-          in the channel for a while, then quit, usually with the message <em>Remote host closed the
-          connection</em> or <em>Ping timeout</em>. Others join channels, then leave straight away.
-          Although their purpose is unknown&mdash;there have been theories suggesting they collect
-          channel and user lists&mdash;, they can be a nuisance and should probably be banned.
-        </p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/botmonitoring">View on GitHub</a>
 
-        <h2 id="identifying" class="content-subhead">Identifying<a href="#identifying" class="content-link"></a></h2>
-        <p>
-          Nicknames of the bots usually consist of only lowercase letters, and their username and
-          real name is fully or nearly identical to their nick. Their hostname is an IPv4 address.
-          They don't respond to CTCP requests and private messages.
-        </p>
-        <p>
-          More recently, we have been seeing the following pattern:
+          <h1 id="project_title">freenode bot monitoring</h1>
+          <h2 id="project_tagline">A project created to help fight the spy bot &quot;invasion&quot; on freenode.</h2>
 
-          <pre>
-PORT     STATE SERVICE    VERSION
-1080/tcp open  socks5     Socks4A (Username/password authentication required)
-8080/tcp open  http-proxy 3Proxy http proxy</pre>
-          </p>
-        </p>
-
-        <h2 id="ranges" class="content-subhead">Ranges<a href="#ranges" class="content-link"></a></h2>
-        <p>
-          The following IP ranges are known to have been K-lined by freenode staff. However, we have no
-          way of knowing if they still are. Moreover, this list may be incomplete.
-        </p>
-        <ul>
-          <li>91.210.100.0/22</li>
-          <li>91.212.45.0/24</li>
-          <li>91.229.248.0/24</li>
-          <li>193.28.144.0/24</li>
-          <li>193.104.110.0/24</li>
-          <li>193.105.154.0/24</li>
-        </ul>
-        <p>
-          The following IP ranges are currently being monitored by the script running under the
-          nick <i>hexagon</i>.
-        </p>
-        <ul>
-          <li>27.122.0.0/16</li>
-          <li>46.165.0.0/16</li>
-          <li>62.122.0.0/16</li>
-          <li>66.172.0.0/16</li>
-          <li>87.223.0.0/16</li>
-          <li>91.200.0.0&ndash;91.255.255.255 (91.200.0.0/13, 91.208.0.0/12, 91.224.0.0/11)</li>
-          <li>93.114.0.0/16</li>
-          <li>109.201.0.0/16</li>
-          <li>191.200.0.0&ndash;191.255.255.255 (191.200.0.0/13, 191.208.0.0/12, 191.224.0.0/11)</li>
-          <li>193.28.0.0/16</li>
-        </ul>
-
-        <h2 id="connect" class="content-subhead">Connect<a href="#connect" class="content-link"></a></h2>
-        <p>
-          You can <a href="irc://chat.freenode.net/%23botmonitoring">join</a>
-          <code>##botmonitoring</code> on freenode with an IRC client or use
-          <a href="http://webchat.freenode.net/?channels=%23%23botmonitoring">webchat</a>.
-        </p>
-
-        <h2 id="rules" class="content-subhead">Rules<a href="#rules" class="content-link"></a></h2> 
-        <ol>
-          <li>Use common sense.</li>
-          <li>Do not send notices to the channel.</li>
-          <li>Do not bring unauthorized bots to the channel. This includes client scripts with 
-              automated triggers replying in-channel.</li>
-          <li>Do not message or CTCP users identified as possible bots by <i>hexagon</i>. It can be
-              annoying to users.</li>
-        </ol>
-      </div>
+        </header>
     </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="premise" class="anchor" href="#premise"><span class="octicon octicon-link"></span></a>Premise</h1>
+
+<p>There have been reports of bots following a similar pattern joining channels. Although their true purpose is currently unknown, they can be a nuisance, and people have been suggesting they might be collecting channel and user statistics.</p>
+
+<h1>
+<a name="identifying" class="anchor" href="#identifying"><span class="octicon octicon-link"></span></a>Identifying</h1>
+
+<p>Nicknames of the bots usually consist of only lowercase letters, and their username and real name is fully or nearly identical to their nick. Their hostname is an IPv4 address. They don't respond to CTCP requests and private messages. Some of them idle in channels for a while, and others part straight away. A few are capable of rejoining on kick and <code>/remove</code>. They usually quit with the message <em>Remote host closed the connection</em> or <em>Ping timeout</em>.</p>
+
+<p>More recently, we've been seeing the following pattern:</p>
+
+<pre><code>PORT     STATE SERVICE    VERSION
+1080/tcp open  socks5     Socks4A (Username/password authentication required)
+8080/tcp open  http-proxy 3Proxy http proxy
+</code></pre>
+
+<h1>
+<a name="ranges" class="anchor" href="#ranges"><span class="octicon octicon-link"></span></a>Ranges</h1>
+
+<p>The following IP ranges are known to have been K-lined by freenode staff. However, we have no way of knowing if they still are, and this list may be incomplete.</p>
+
+<ul>
+<li>91.210.100.0/22</li>
+<li>91.212.45.0/24</li>
+<li>91.229.248.0/24</li>
+<li>193.28.144.0/24</li>
+<li>193.104.110.0/24</li>
+<li>193.105.154.0/24</li>
+</ul><p>The following IP ranges are currently being monitored:</p>
+
+<ul>
+<li>27.122.0.0/16</li>
+<li>46.165.0.0/16</li>
+<li>62.122.0.0/16</li>
+<li>66.172.0.0/16</li>
+<li>87.223.0.0/16</li>
+<li>91.200.0.0–91.255.255.255 (91.200.0.0/13, 91.208.0.0/12, 91.224.0.0/11)</li>
+<li>93.114.0.0/16</li>
+<li>109.201.0.0/16</li>
+<li>191.200.0.0–191.255.255.255 (191.200.0.0/13, 191.208.0.0/12, 191.224.0.0/11)</li>
+<li>193.28.0.0/16</li>
+</ul><h1>
+<a name="connect" class="anchor" href="#connect"><span class="octicon octicon-link"></span></a>Connect</h1>
+
+<p>Join <code>##botmonitoring</code> on the freenode IRC network.</p>
+
+<h1>
+<a name="rules" class="anchor" href="#rules"><span class="octicon octicon-link"></span></a>Rules</h1>
+
+<ul>
+<li>Use common sense.</li>
+<li>Do not send notices to the channel. Doing so will trigger a five-minute kickban.</li>
+<li>Do not bring unauthorized bots to the channel. This includes client scripts with automated triggers replying in-channel.</li>
+<li>Do not message or CTCP users identified as possible bots by hexagon, unless you're fairly certain you're dealing with a bot.</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
