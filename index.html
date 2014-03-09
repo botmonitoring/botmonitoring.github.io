@@ -59,6 +59,7 @@
         <p>
           The following IP ranges are currently being monitored:
         </p>
+        <!-- TODO: Convert to CIDR -->
         <ul>
           <li>46.148.3?.*</li>
           <li>62.109.*.*</li>
@@ -86,32 +87,6 @@
         </ul>
 
         <p>
-          The following IP ranges are a subset of the previous list, and should be mostly safe to
-          ban. However, banforwarding to <code>##not-a-honeypot</code> or a similar channel is
-          advised in case the bans affect legitimate users.
-        </p>
-        <ul>
-          <li>46.148.30.0/23</li>
-          <li>62.109.0.0/19</li>
-          <li>78.24.216.0/21</li>
-          <li>82.146.40.0/21</li>
-          <li>82.146.56.0/21</li>
-          <li>91.197.131.0/24</li>
-          <li>91.207.116.0/23</li>
-          <li>91.222.64.0/24</li>
-          <li>91.229.76.0/22</li>
-          <li>91.229.248.0/24</li>
-          <li>188.120.240.0/21</li>
-          <li>188.190.124.0/22</li>
-          <li>193.0.146.0/23</li>
-          <li>193.28.144.0/24</li>
-          <li>193.104.110.0/24</li>
-          <li>193.106.31.0/24</li>
-          <li>194.1.184.0/24</li>
-          <li>195.88.190.0/23</li>
-        </ul>
-
-        <p>
           The following is a frequently updated list of active bot IP ranges:
         </p>
         <script src="https://gist.github.com/sdamashek/9402393.js"></script>
@@ -126,7 +101,7 @@
         <p>
           If you do wish to ban these bots simply, you need to run these commands.
           <script src="https://gist.github.com/techfilmer/976e034f3a9e6ff5543f.js"></script>
-          The <code>$##not-a-honeypot</code> at the end will forward any users who match the bans to the channel <code>##not-a-honeypot</code>.
+          The <code>$##not-a-honeypot</code> at the end will forward any users who match the bans to the channel <code>##not-a-honeypot</code>. 
           It might be wise for you to join the channel (<a href="http://webchat.freenode.net/?channels=%23%23not-a-honeypot">webchat</a>) in case an innocent user was caught by the bans.
           </p>
         <h3 id="ban" class="content-subhead">Setting channel mode +r or +s<a href="#chanmode" class="content-link"></a></h3>
@@ -140,12 +115,12 @@
          As the bots do not identify to any NickServ account, they are blocked from joining. However this could also cause problems for normal
          users of your channel if they don't have a registered account or are not identified.
         </p>
-
-        <h2 id="rules" class="content-subhead">Rules<a href="#rules" class="content-link"></a></h2>
+        
+        <h2 id="rules" class="content-subhead">Rules<a href="#rules" class="content-link"></a></h2> 
         <ol>
           <li>Use common sense.</li>
           <li>Do not send notices to the channel. Doing so will trigger a five-minute kickban.</li>
-          <li>Do not bring unauthorized bots to the channel. This includes client scripts with
+          <li>Do not bring unauthorized bots to the channel. This includes client scripts with 
               automated triggers replying in-channel.</li>
           <li>Do not message or CTCP users identified as possible bots unless you're fairly certain
               you're dealing with a bot.</li>
