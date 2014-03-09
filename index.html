@@ -97,7 +97,7 @@
           on the freenode IRC network  (<a href="http://webchat.freenode.net/?channels=%23%23botmonitoring">webchat</a>).
         </p>
 
-        <h2 id="ban" class="content-subhead">Removing the bots<a href="#removing" class="content-link"></a></h2>
+        <h2 id="removing" class="content-subhead">Removing the bots<a href="#removing" class="content-link"></a></h2>
         <p>
           If you wish to ban these bots, you need to run these commands:
 
@@ -106,13 +106,17 @@
           Any users who match the bans will be forwarded to the channel <code>##not-a-honeypot</code>. 
           It might be wise for you to join the channel in case an innocent user was caught by the bans.
           </p>
-        <h3 id="ban" class="content-subhead">Avoiding the bots<a href="#avoiding" class="content-link"></a></h3>
+        <h2 id="avoiding" class="content-subhead">Avoiding the bots<a href="#avoiding" class="content-link"></a></h2>
         <p>
           We believe these bots find channels because they appear on <code>/list</code>, which lists
           every non-secret channel on freenode. You can remove your channel from the list by applying
-          the channel mode +s. Alternatively, you could use +r to block unregistered users, or +S to
+          the channel mode +s.
+        </p>
+        <p>
+          Alternatively, you could use +r to block unregistered users, or +S to
           block non-SSL users, however the latter two could also cause problems for normal users.
-
+        </p>
+        <p>
           <strong>Help on channel modes:</strong>
           <a href="http://freenode.net/using_the_network.shtml#modes">http://freenode.net/using_the_network.shtml#modes</a>
         </p>
