@@ -91,11 +91,16 @@
           It might be wise for you to join the channel (<a href="http://webchat.freenode.net/?channels=%23%23not-a-honeypot">webchat</a>) in case an innocent user was caught by the bans.
           </p>
         <h3 id="ban" class="content-subhead">Setting channel mode +r or +s<a href="#chanmode" class="content-link"></a></h3>
-         <p>We believe these bots find channels because they appear on <code>/list</code>, which lists every none-secret channel on freenode.
+        <p>
+         We believe these bots find channels because they appear on <code>/list</code>, which lists every none-secret channel on freenode.
          You can remove your channel from the list by applying the channel mode +s (Example: <code>/mode #Example +s</code>).
          If you wish to remove channel mode +s, use the same command, however replace <code>+s</code> with <code>-s</code>.
-          
-         </p>
+        </p>
+        <p>
+         Additionally, you could set the channel mode +r on your channel. This will prevent any unregistered users from joining the channel.
+         As the bots do not identify to any NickServ account, they are blocked from joining. However this could also cause problems for normal
+         users of your channel if they don't have a registered account or are not identified.
+        </p>
         
         <h2 id="rules" class="content-subhead">Rules<a href="#rules" class="content-link"></a></h2> 
         <ol>
