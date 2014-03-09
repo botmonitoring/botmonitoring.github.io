@@ -88,8 +88,8 @@
 
         <p>
           The following is a frequently updated list of active bot IP ranges:
+          <script src="https://gist.github.com/sdamashek/9402393.js"></script>
         </p>
-        <script src="https://gist.github.com/sdamashek/9402393.js"></script>
 
         <h2 id="connect" class="content-subhead">Connect<a href="#connect" class="content-link"></a></h2>
         <p>
@@ -97,23 +97,24 @@
           on the freenode IRC network  (<a href="http://webchat.freenode.net/?channels=%23%23botmonitoring">webchat</a>).
         </p>
 
-        <h2 id="ban" class="content-subhead">Removing the bots<a href="#ban" class="content-link"></a></h2>
+        <h2 id="ban" class="content-subhead">Removing the bots<a href="#removing" class="content-link"></a></h2>
         <p>
-          If you do wish to ban these bots simply, you need to run these commands.
+          If you wish to ban these bots, you need to run these commands:
+
           <script src="https://gist.github.com/techfilmer/976e034f3a9e6ff5543f.js"></script>
-          The <code>$##not-a-honeypot</code> at the end will forward any users who match the bans to the channel <code>##not-a-honeypot</code>. 
-          It might be wise for you to join the channel (<a href="http://webchat.freenode.net/?channels=%23%23not-a-honeypot">webchat</a>) in case an innocent user was caught by the bans.
+
+          Any users who match the bans will be forwarded to the channel <code>##not-a-honeypot</code>. 
+          It might be wise for you to join the channel in case an innocent user was caught by the bans.
           </p>
-        <h3 id="ban" class="content-subhead">Setting channel mode +r or +s<a href="#chanmode" class="content-link"></a></h3>
+        <h3 id="ban" class="content-subhead">Avoiding the bots<a href="#avoiding" class="content-link"></a></h3>
         <p>
-         We believe these bots find channels because they appear on <code>/list</code>, which lists every none-secret channel on freenode.
-         You can remove your channel from the list by applying the channel mode +s (Example: <code>/mode #Example +s</code>).
-         If you wish to remove channel mode +s, use the same command, however replace <code>+s</code> with <code>-s</code>.
-        </p>
-        <p>
-         Additionally, you could set the channel mode +r on your channel. This will prevent any unregistered users from joining the channel.
-         As the bots do not identify to any NickServ account, they are blocked from joining. However this could also cause problems for normal
-         users of your channel if they don't have a registered account or are not identified.
+          We believe these bots find channels because they appear on <code>/list</code>, which lists
+          every non-secret channel on freenode. You can remove your channel from the list by applying
+          the channel mode +s. Alternatively, you could use +r to block unregistered users, or +S to
+          block non-SSL users, however the latter two could also cause problems for normal users.
+
+          <strong>Help on channel modes:</strong>
+          <a href="http://freenode.net/using_the_network.shtml#modes">http://freenode.net/using_the_network.shtml#modes</a>
         </p>
         
         <h2 id="rules" class="content-subhead">Rules<a href="#rules" class="content-link"></a></h2> 
