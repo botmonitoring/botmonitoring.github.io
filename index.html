@@ -57,12 +57,18 @@
 
         <h2 id="removing" class="content-subhead">Removing the bots<a href="#removing" class="content-link"></a></h2>
         <p>
-          If you wish to ban these bots, you need to run these commands:
+          <!--If you wish to ban these bots, you need to run these commands:
 
           <script src="https://gist.github.com/xnrand/551233f39cf1092a29b1.js"></script>
 
           Any users who match the bans will be forwarded to the channel <code>##not-a-honeypot</code>.
-          It might be wise for you to join the channel in case an innocent user was caught by the bans.
+          It might be wise for you to join the channel in case an innocent user was caught by the bans.-->
+          If you wish to ban these bots, you need to run this command in your channel(s):
+
+          <pre>/mode +b $j:##botmonitoring-bots</pre>
+
+          Any users who match the bans set in <code>##botmonitoring-bots</code> will be banned.
+          Forwards are not supported for this type of ban.
           </p>
         <h2 id="avoiding" class="content-subhead">Avoiding the bots<a href="#avoiding" class="content-link"></a></h2>
         <p>
