@@ -37,17 +37,18 @@
         </p>
         <p>
           More recently, we have been seeing the following pattern:
+        </p>
 
-          <pre>PORT     STATE SERVICE    VERSION
+        <pre>PORT     STATE SERVICE    VERSION
 1080/tcp open  socks5     Socks4A (Username/password authentication required)
 8080/tcp open  http-proxy 3Proxy http proxy</pre>
-        </p>
 
         <h2 id="ranges" class="content-subhead">Ranges<a href="#ranges" class="content-link"></a></h2>
         <p>
           The following is a frequently updated list of active bot IP ranges:
-          <script src="https://gist.github.com/sdamashek/9402393.js"></script>
         </p>
+
+        <script src="https://gist.github.com/sdamashek/9402393.js"></script>
 
         <h2 id="connect" class="content-subhead">Connect<a href="#connect" class="content-link"></a></h2>
         <p>
@@ -58,19 +59,25 @@
         <h2 id="removing" class="content-subhead">Removing the bots<a href="#removing" class="content-link"></a></h2>
         <p>
           If you wish to ban these bots, execute this command in your channel(s):
+        </p>
 
-          <pre>/mode +b $j:##botmonitoring-bots$##not-a-honeypot</pre>
+        <pre>/mode +b $j:##botmonitoring-bots$##not-a-honeypot</pre>
 
+        <p>
           This will keep your channel's ban list up to date automatically when new bans are added to
           <code>##botmonitoring-bots</code>.
         </p>
-        For an explanation into how $j works, please see <a href="https://gist.github.com/Chiyo-chan/6bcec44fe37381f18193">this gist</a>.
-        <!-- feel free to correct this line if I've done it incorrectly. --Chiyo -->
+        <p>
+          For an explanation into how $j works, please see <a href="https://gist.github.com/Chiyo-chan/6bcec44fe37381f18193">this gist</a>.
+        </p>
+        <!-- feel free to correct this line if I've done it incorrectly. ~~Chiyo -->
         <p>
           Alternatively, you can execute the following commands instead:
+        </p>
 
-          <script src="https://gist.github.com/xnrand/551233f39cf1092a29b1.js"></script>
+        <script src="https://gist.github.com/xnrand/551233f39cf1092a29b1.js"></script>
 
+        <p>
           Any users matching the bans will be forwarded to <code>##not-a-honeypot</code>. It might be
           wise for you to join that channel in case an innocent user gets caught by the bans.
         </p>
