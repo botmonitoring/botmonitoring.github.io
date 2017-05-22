@@ -3,13 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A project created to keep track of and ban unauthorized (spy) bots on freenode">
 
     <title>freenode bot monitoring</title>
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
     <link rel="stylesheet" href="css/pure-combo.css">
-    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <div id="main">
@@ -19,59 +17,15 @@
       </div>
 
       <div class="content">
-        <h2 id="premise" class="content-subhead">Premise<a href="#premise" class="content-link"></a></h2>
         <p>
-          This project was initially created because we've seen a particular pattern of bots. Since then, we've seen
-          many other bots with varying patterns. The ones we initially created the project for are long gone now. We're
-          not as active now but we still occasionally find and ban new bots.
-        </p>
+          <strong>
+            This project has been shut down as it has become obsolete&mdash;
+            there hasn't been any activity for a while and there don't seem to be
+            any current issues that we could help with.
+          </strong>
 
-        <h2 id="connect" class="content-subhead">Connect<a href="#connect" class="content-link"></a></h2>
-        <p>
-          <a href="ircs://chat.freenode.net:6697/%23%23botmonitoring">Join</a> <code>##botmonitoring</code>
-          on the freenode IRC network (<a href="https://kiwiirc.com/client/chat.freenode.net:+6697/##botmonitoring">webchat</a>).
+          So long, and thanks for all the fish.
         </p>
-
-        <h2 id="removing" class="content-subhead">Banning the bots in your channel<a href="#banning" class="content-link"></a></h2>
-        <p>
-          If you want to ban the bots, execute this command in your channel(s):
-        </p>
-
-        <pre>/mode +b $j:##botmonitoring-bots$##not-a-honeypot</pre>
-
-        <p>
-          This will automatically keep your channel's ban list up to date with the ban list of
-          <code>##botmonitoring-bots</code>.
-        </p>
-
-        <p>
-          Any users matching the bans will be forwarded to <code>##not-a-honeypot</code>. You can choose not to forward
-          them by removing the <code>$##not-a-honeypot</code> part. However, if you keep the forward, it's probably a
-          good idea to join that channel so that you can notice if an innocent user happens to get caught by one of the
-          bans. (It's rare, but it can happen.)
-        </p>
-        <h2 id="avoiding" class="content-subhead">Avoiding the bots<a href="#avoiding" class="content-link"></a></h2>
-        <p>
-          We believe these bots find channels because they appear on <code>/list</code>, which lists
-          every non-secret channel on freenode. You can remove your channel from the list by applying
-          the channel mode <code>+s</code>.
-        </p>
-        <p>
-          Alternatively, you could use +r to block unregistered users, but that may also prevent some regulars that
-          don't have a NickServ account or aren't identified to it from joining.
-        </p>
-        <p>
-          <strong><a href="https://web.archive.org/web/20160212092427/https://www.freenode.net/using_the_network.shtml#modes">Help on channel modes</a>
-        </p>
-
-        <h2 id="rules" class="content-subhead">Rules<a href="#rules" class="content-link"></a></h2>
-        <ol>
-          <li>Use common sense.</li>
-          <li>Do not bring unauthorized bots to the channel. This includes client scripts with
-              automated triggers replying in-channel.</li>
-          <li>Avoid sending too many messages and CTCP requests to detected possible bots if they aren't obvious,
-              because if they happen to be real people, you will just annoy them.</li>
-        </ol>
       </div>
     </div>
   </body>
